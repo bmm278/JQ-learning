@@ -17,6 +17,7 @@
             width: 800px;
             height: 400px;
             background-color: rgb(199, 122, 122);
+            margin: 100px;
             position: relative;
         }
 
@@ -60,29 +61,34 @@
     <script src="./jquery-3.6.0.js"></script>
     <script>
         
-         
         $('#up').click(function (){
-            console.log("hi up", $(this).css("background", "black"));
-                $(".box").css("top", "-=50px")
-                $(".box").css("background", "black");
+            // console.log("hi up", $(this).css("background", "black"));
+                $(".box")
+                .css("top", "-=50px")
+                .css("background", "black")
+                .css("transform", "rotateX(-180deg) rotateY(180deg)");
         })
         $('#down').click(function (){
-            console.log("hi down", $(this).css("background", "skyblue"));
-                $(".box").css("top", "+=50px")
-                $(".box").css("background", "skyblue");
+            // console.log("hi down", $(this).css("background", "skyblue"));
+                $(".box")
+                .css("top", "+=50px")
+                .css("background", "skyblue")
+                .css("transform", "rotateX(-45deg) rotateY(45deg)");
             
         })
         $('#right').click(function (){
-            console.log("hi right", $(this).css("background", "yellow"));
-            $(".box").css("left", "+=100px");
-            $(".box").css("background", "yellow");
-            $(".box").css("transform", "rotateX(45deg)");
-            
+            // console.log("hi right", $(this).css("background", "yellow"));
+            $(".box")
+            .css("left", "+=100px")
+            .css("background", "blue")
+            .css("transform", "rotateX(45deg) rotateY(-45deg)")
+            .css("border-radius", "50%")
         })
         $('#left').click(function (){
             console.log("hi left", $(this).css("background", "red"));
             $(".box").css("left", "-=100px");
             $(".box").css("background", "red");
+            $(".box").css("transform", "rotateX(180deg) rotateY(180deg)");
         })
     </script>
 </body>

@@ -116,7 +116,7 @@
             </div>
         </div>
 
-        <script src="./js/jquery-3.6.0.min.js"></script>
+        <script src="/jquery-3.6.0.min.js"></script>
         <script>
             // 輪播牆
             // 滑鼠移動到指示點之後，火車要移動到相對應的位置
@@ -130,6 +130,7 @@
 
             let nowPage = 1;
             trainMove(nowPage);
+            
             $(".slider-dots-area li").mouseenter(function () {
                 console.log("hi", $(this).index());
                 // const moveX = [
